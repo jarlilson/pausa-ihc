@@ -27,10 +27,9 @@ https://<seu-usuario>.github.io/<seu-repo>/
 npm i
 npm run dev
 ```
-
-A estrutura foi modularizada para favorecer reutilização, clareza e manutenção:
-
-src/
+<h2>🧩 Arquitetura do Projeto</h2>
+<p>A estrutura foi modularizada para favorecer <strong>reutilização, clareza e manutenção</strong>:</p>
+<pre><code>src/
  ├── components/   → elementos reutilizáveis da interface
  │    ├── ui/      → componentes de interface genéricos (botões, modais, toasts)
  │    └── mural/   → componentes específicos do mural de desabafos
@@ -41,8 +40,7 @@ src/
  ├── types/        → tipagens globais (TypeScript)
  ├── App.tsx       → componente raiz da aplicação e roteamento
  └── main.tsx      → ponto de entrada, inicializando o React e a navegação
-
-
+</code></pre>
 
 Observações:
 - Logo em `public/PAUSA LOGO.png` e referenciado via `import.meta.env.BASE_URL`.
