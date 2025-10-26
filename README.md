@@ -30,25 +30,18 @@ npm run dev
 
 A estrutura foi modularizada para favorecer reutilização, clareza e manutenção:
 
-📦 pausa-ihc
- ┣ 📂 public/
- ┃ ┗ 📄 PAUSA LOGO.png
- ┣ 📂 src/
- ┃ ┣ 📂 components/
- ┃ ┃ ┣ 📂 mural/
- ┃ ┃ ┗ 📂 ui/
- ┃ ┣ 📂 context/
- ┃ ┣ 📂 hooks/
- ┃ ┣ 📂 routes/
- ┃ ┣ 📂 services/
- ┃ ┣ 📂 types/
- ┃ ┣ 📄 App.tsx
- ┃ ┗ 📄 main.tsx
- ┣ 📄 index.html
- ┣ 📄 package.json
- ┣ 📄 tailwind.config.js
- ┣ 📄 vite.config.ts
- ┗ 📄 README.md
+src/
+ ├── components/   → elementos reutilizáveis da interface
+ │    ├── ui/      → componentes de interface genéricos (botões, modais, toasts)
+ │    └── mural/   → componentes específicos do mural de desabafos
+ ├── context/      → contextos globais (autenticação, tema, etc.)
+ ├── hooks/        → hooks personalizados para lógica reutilizável
+ ├── routes/       → configuração e controle das rotas
+ ├── services/     → integrações e funções simuladas de API
+ ├── types/        → tipagens globais (TypeScript)
+ ├── App.tsx       → componente raiz da aplicação e roteamento
+ └── main.tsx      → ponto de entrada, inicializando o React e a navegação
+
 
 
 Observações:
