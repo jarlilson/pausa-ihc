@@ -25,14 +25,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # sem cache: remove esta linha -> cache: 'npm'
 
       - name: Install deps
-        run: npm ci
+        run: npm install
 
       - name: Build
         env:
-          # Essas variáveis permitem ao vite.config.ts detectar o repo e ativar base '/repo/'
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: npm run build
@@ -40,7 +39,6 @@ jobs:
       - name: Prepare static site for Pages
         run: |
           touch dist/.nojekyll
-          # SPA fallback: 404.html = index.html
           cp dist/index.html dist/404.html || true
 
       - name: Upload artifact
